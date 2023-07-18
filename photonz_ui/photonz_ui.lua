@@ -20,11 +20,23 @@ local function maxfps(value)
     end
 end
 
+local function gxVSync(value)
+    if string.trim(value) ~= "" then -- if value parameter is not nil, set the cvar value
+        SetCVar("gxVSync", tonumber(value))
+        local maxfps = GetCVar("gxVSync")
+        print("gxVSync set to:", gxVSync)
+    else -- if no value parameter is provided, get the current cvar value
+        local gxVSync = GetCVar("gxVSync")
+        print("gxVSync value is currently set to:", gxVSync)
+    end
+end
+
 local function puihelp()
     print("/puihelp")
     print("/puienable")
     print("/ShowClassColorInFriendlyNameplate 0 1")
     print("/maxfps 0 300")
+    print("/gxVSync 0 1 2")
 end
 
 local function puienable()
@@ -32,12 +44,14 @@ local function puienable()
     ShowClassColorInFriendlyNameplate (0)
 end
 
-SlashCmdList.puihelp = puihelp
-SlashCmdList.puienable = puienable
 SlashCmdList.ShowClassColorInFriendlyNameplate = ShowClassColorInFriendlyNameplate
 SlashCmdList.maxfps = maxfps
+SlashCmdList.gxvsync = gxvsync
+SlashCmdList.puihelp = puihelp
+SlashCmdList.puienable = puienable
 
-SLASH_puihelp1 ="/puihelp"
-SLASH_puienable1 ="/puienable"
+SLASH_gxvsync1 = "/gxvsync"
 SLASH_ShowClassColorInFriendlyNameplate1 = "/ShowClassColorInFriendlyNameplate"
 SLASH_maxfps1 = "/maxfps"
+SLASH_puihelp1 ="/puihelp"
+SLASH_puienable1 ="/puienable"
