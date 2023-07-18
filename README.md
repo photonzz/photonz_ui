@@ -4,26 +4,22 @@ world of warcraft addon that includes different useful commands
 
 list of commands:
 
-### photonz_ui_help (show help)
-
+## photonz_ui_help (show help)
+### show help
 /photonz_ui_help
-
-### photonz_ui_show (show all settings)
-
-/photonz_ui_show
-
-### photonz_ui_enable (enable all settings)
-
+### show current settings
+/photonz_ui_show 
+### enable all settings
 /photonz_ui_enable
 
-### show current maxfps
+## maxfps
+### show value
 /maxfps 
-
-### set maxfps
+### set value
 /maxfps 0-300
 
-### show ffxglow
+## ffxglow
+### show value
 /ffxglow
-
-### set ffxglow
+### set value
 /ffxglow 0-1
