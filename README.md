@@ -1,8 +1,8 @@
-# photonz_ui
+photonz_ui is a lightweight WoW addon that enhances the game with a few convenient features and option settings.
 
-world of warcraft addon that includes different useful commands
+Slash Commands
 
-list of commands:
+photonz_ui offers the following slash commands:
 
 ## photonz_ui_help (show help)
 ### show help
