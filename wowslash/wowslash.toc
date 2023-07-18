@@ -1,0 +1,7 @@
+## Interface: 11304
+## Title: wowslash
+## Notes: Prints "Hello, World" to the chat.
+## Author: photonz
+## Version: 0.0.1
+
+wowslash.lua
