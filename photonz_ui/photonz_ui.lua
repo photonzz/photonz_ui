@@ -27,7 +27,7 @@ local function classfriendly(value)
         print("ShowClassColorInFriendlyNameplate set to:", value)
     else
         local classfriendly = GetCVar("ShowClassColorInFriendlyNameplate")
-            print("ShowClassColorInFriendlyNameplate value is:", ffxglow)
+            print("ShowClassColorInFriendlyNameplate value is:", classfriendly)
     end
 end
 
