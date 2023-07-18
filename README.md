@@ -8,5 +8,5 @@ list of commands:
 /maxfps 
 
 ### set maxfps
-/maxfps <number>
+/maxfps 0-300
 
