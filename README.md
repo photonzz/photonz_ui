@@ -1,6 +1,6 @@
 # wowslash
 
-wow addon that includes different useful commands
+world of warcraft addon that includes different useful commands
 
 list of commands:
 
