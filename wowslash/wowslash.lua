@@ -12,3 +12,13 @@ end
 -- Define a slash command to execute the maxFPS function
 SLASH_MAXFPS1 = "/maxfps"
 SlashCmdList["MAXFPS"] = maxFPS
+
+-- Define a function to activate performance mode
+    local function performance()
+        maxFPS(300) -- Set maxfps to 30
+        ffxglowOff() -- Disable ffxGlow effect
+      end
+      
+      -- Define a slash command to execute the performance function
+      SLASH_PERFORMANCE1 = "/performance"
+      SlashCmdList["PERFORMANCE"] = performance

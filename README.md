@@ -10,3 +10,6 @@ list of commands:
 ### set maxfps
 /maxfps 0-300
 
+### performance mode (enables all commands to increase performance and visibility)
+
+/performance
