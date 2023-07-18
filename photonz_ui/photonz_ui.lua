@@ -1,6 +1,6 @@
 local function ShowClassColorInFriendlyNameplate(value)
     if string.trim(value) ~= "" then -- if value parameter is not nil, set the cvar value
-        SetCVar("ShowClassColorInFriendlyNameplate", tonumber(value))
+        SetCVar("ShowClassColorInFriendlyNameplate", value)
         local ShowClassColorInFriendlyNameplate = GetCVar("ShowClassColorInFriendlyNameplate")
         print("ShowClassColorInFriendlyNameplate set to:", ShowClassColorInFriendlyNameplate)
     else -- if no value parameter is provided, get the current cvar value
@@ -11,7 +11,7 @@ end
 
 local function maxfps(value)
     if string.trim(value) ~= "" then -- if value parameter is not nil, set the cvar value
-        SetCVar("maxfps", tonumber(value))
+        SetCVar("maxfps", value)
         local maxfps = GetCVar("maxfps")
         print("maxfps set to:", maxfps)
     else -- if no value parameter is provided, get the current cvar value
@@ -20,14 +20,14 @@ local function maxfps(value)
     end
 end
 
-local function gxVSync(value)
+local function nameplateOccludedAlphaMult(value)
     if string.trim(value) ~= "" then -- if value parameter is not nil, set the cvar value
-        SetCVar("gxVSync", tonumber(value))
-        local maxfps = GetCVar("gxVSync")
-        print("gxVSync set to:", gxVSync)
+        SetCVar("nameplateOccludedAlphaMult", value)
+        local nameplateOccludedAlphaMult = GetCVar("nameplateOccludedAlphaMult")
+        print("nameplateOccludedAlphaMult set to:", nameplateOccludedAlphaMult)
     else -- if no value parameter is provided, get the current cvar value
-        local gxVSync = GetCVar("gxVSync")
-        print("gxVSync value is currently set to:", gxVSync)
+        local nameplateOccludedAlphaMult = GetCVar("nameplateOccludedAlphaMult")
+        print("nameplateOccludedAlphaMult value is currently set to:", nameplateOccludedAlphaMult)
     end
 end
 
@@ -36,21 +36,22 @@ local function puihelp()
     print("/puienable")
     print("/ShowClassColorInFriendlyNameplate 0 1")
     print("/maxfps 0 300")
-    print("/gxVSync 0 1 2")
+    print("nameplateOccludedAlphaMult 0 1")
 end
 
 local function puienable()
     maxfps(300) 
     ShowClassColorInFriendlyNameplate (0)
+    nameplateOccludedAlphaMult(1)
 end
 
 SlashCmdList.ShowClassColorInFriendlyNameplate = ShowClassColorInFriendlyNameplate
 SlashCmdList.maxfps = maxfps
-SlashCmdList.gxvsync = gxvsync
+SlashCmdList.nameplateOccludedAlphaMult = nameplateOccludedAlphaMult
 SlashCmdList.puihelp = puihelp
 SlashCmdList.puienable = puienable
 
-SLASH_gxvsync1 = "/gxvsync"
+SLASH_nameplateOccludedAlphaMult1 = "/nameplateOccludedAlphaMult"
 SLASH_ShowClassColorInFriendlyNameplate1 = "/ShowClassColorInFriendlyNameplate"
 SLASH_maxfps1 = "/maxfps"
 SLASH_puihelp1 ="/puihelp"
