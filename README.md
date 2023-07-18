@@ -10,6 +10,12 @@ list of commands:
 ### set maxfps
 /maxfps 0-300
 
+### show ffxglow
+/ffxglow
+
+### set ffxglow
+/ffxglow 0-1
+
 ### performance mode (enables all commands to increase performance and visibility)
 
 /performance
