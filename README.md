@@ -16,6 +16,11 @@ list of commands:
 ### set ffxglow
 /ffxglow 0-1
 
-### performance mode (enables all commands to increase performance and visibility)
+### photonz_ui_show (show all settings)
 
-/performance
+/photonz_ui_show
+
+### photonz_ui_enable (enable all settings)
+
+/photonz_ui_enable
+
