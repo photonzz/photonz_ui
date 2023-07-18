@@ -8,17 +8,28 @@ local function maxFPS(value)
         print("MaxFPS value is:", maxfps)
     end
 end
-      
--- Define a slash command to execute the maxFPS function
-SLASH_MAXFPS1 = "/maxfps"
-SlashCmdList["MAXFPS"] = maxFPS
 
--- Define a function to activate performance mode
-    local function performance()
-        maxFPS(300) -- Set maxfps to 30
-        ffxglowOff() -- Disable ffxGlow effect
-      end
-      
-      -- Define a slash command to execute the performance function
-      SLASH_PERFORMANCE1 = "/performance"
-      SlashCmdList["PERFORMANCE"] = performance
+-- Define a function to disable the ffxglow effect
+local function ffxglow(value)
+    if value then
+        SetCVar("ffxglow", value)
+        print("ffxglow set to:", value)
+    else
+        local ffxglow = GetCVar("ffxglow")
+        print("ffxglow value is:", ffxglow)
+    end
+end
+
+-- Define a function to execute all of the useful commands
+local function performance()
+    maxFPS(300) -- Set maxfps to 300
+    ffxglow(0) -- Disable ffxGlow effect
+end
+
+-- Define slash commands 
+SLASH_MAXFPS1 = "/maxfps"
+SLASH_FFXOFF1 = "/ffxglow"
+SLASH_PERFORMANCE1 = "/performance"
+SlashCmdList["MAXFPS"] = maxFPS
+SlashCmdList["FFXGLOW"] = ffxglow
+SlashCmdList["PERFORMANCE"] = performance
