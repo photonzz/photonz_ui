@@ -1,4 +1,3 @@
-## /run print((select(4, GetBuildInfo())));
 ## Interface: 11304
 ## Title: wowslash
 ## Notes: Prints "Hello, World" to the chat.
