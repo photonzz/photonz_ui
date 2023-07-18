@@ -1,7 +1,0 @@
-## Interface: 11304
-## Title: wowslash
-## Notes: various slashcommands
-## Author: photonz
-## Version: 0.0.1
-
-wowslash.lua

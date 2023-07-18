@@ -1,4 +1,4 @@
-# wowslash
+# photonz_ui
 
 world of warcraft addon that includes different useful commands
 
