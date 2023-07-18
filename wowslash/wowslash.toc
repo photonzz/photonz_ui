@@ -1,6 +1,6 @@
 ## Interface: 11304
 ## Title: wowslash
-## Notes: Prints "Hello, World" to the chat.
+## Notes: various slashcommands
 ## Author: photonz
 ## Version: 0.0.1
 
