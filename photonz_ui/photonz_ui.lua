@@ -27,7 +27,7 @@ local function classfriendly(value)
         print("ShowClassColorInFriendlyNameplate set to:", value)
     else
         local classfriendly = GetCVar("ShowClassColorInFriendlyNameplate")
-            print("ShowClassColorInFriendlyNameplate value is:", classfriendly)
+            print("ShowClassColorInFriendlyNameplate value is currently:", classfriendly)
     end
 end
 
@@ -59,7 +59,7 @@ end
 -- Define slash commands 
 --SLASH_MAXFPS1 = "/maxfps"
 --SLASH_FFXOFF1 = "/ffxglow"
-SLASH_CLASSFRIENDLY = "/classfriendly"
+SLASH_CLASSFRIENDLY1 = "/classfriendly"
 --SLASH_PHOTONZUIENA1 = "/photonz_ui_enable"
 --SLASH_PHOTONZUISHOW1 = "/photonz_ui_show"
 --SLASH_PHOTONZUIHELP1 = "/photonz_ui_help"
