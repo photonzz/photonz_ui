@@ -23,7 +23,7 @@ end
 local function puihelp()
     print("/puihelp")
     print("/puienable")
-    print("ShowClassColorInFriendlyNameplate 0 1")
+    print("/ShowClassColorInFriendlyNameplate 0 1")
     print("/maxfps 0 300")
 end
 
