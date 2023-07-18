@@ -4,7 +4,7 @@ Slash Commands
 
 photonz_ui offers the following slash commands:
 
-## photonz_ui_help (show help)
+## photonz_ui_*
 ### show help
 /photonz_ui_help
 ### show current settings
@@ -23,3 +23,9 @@ photonz_ui offers the following slash commands:
 /ffxglow
 ### set value
 /ffxglow 0-1
+
+## classfriendly
+### show value
+/classfriendly
+### set value
+/classfriendly 0-1
