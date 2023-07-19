@@ -9,7 +9,7 @@ movieSubtitle                   = "1",
 
 showTimestamps              = "%H:%M",
 
-colorChatNamesByClass       = "1", -- no UI
+colorChatNamesByClass       = "1", 
 
 ShowClassColorInFriendlyNameplate = "0",
 
