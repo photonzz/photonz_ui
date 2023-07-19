@@ -7,7 +7,8 @@ local cvars = {
     lootUnderMouse          = "1",
     movieSubtitle                   = "1",
     showTimestamps              = "%H:%M",
-    colorChatNamesByClass       = "1", -- no UI
+    colorChatNamesByClass       = "1", 
+    nameplateHorizontalScale    = "1",
 
     ShowClassColorInFriendlyNameplate = "0",
     nameplateOccludedAlphaMult = "1",
@@ -19,7 +20,7 @@ local cvars = {
     ffxDeath             = "0", 
     ffxNether             = "0", 
     maxFPS              = "300",
-    violenceLevel         = "0", -- min 0, max 5
+    violenceLevel         = "0", 
     }
     
     local f = CreateFrame("Frame")
