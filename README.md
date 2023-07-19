@@ -1,7 +1,8 @@
 photonz_ui is an addon which loads a preset of commands
 
-currentt settings:
+current settings:
 
+```lua
 lootUnderMouse          = "1",
 
 movieSubtitle                   = "1",
@@ -31,6 +32,7 @@ maxFPS              = "300",
 violenceLevel         = "0", -- min 0, max 5
 
 C_NamePlate.SetNamePlateFriendlySize(60, 30)
+```
 
 Alternatives
 
