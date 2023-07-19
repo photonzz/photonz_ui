@@ -1,7 +1,7 @@
-## Interface: 11304
+## Interface: 100105
 ## Title: photonz_ui
 ## Notes: photonz_ui
 ## Author: photonz
-## Version: 0.0.1
+## Version: 0.0.4
 
 photonz_ui.lua
