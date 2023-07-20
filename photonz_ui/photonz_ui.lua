@@ -70,8 +70,7 @@ local cvars = {
     f:RegisterEvent("PLAYER_LOGIN")
     f:SetScript("OnEvent", function()
 
-        -- Set friendly nameplate size
-        C_NamePlate.SetNamePlateFriendlySize(60, 30)
+        C_NamePlate.SetNamePlateFriendlySize(60, 30) -- Set friendly nameplate size
         print("photonz_ui loaded")
     
         for cvar, value in pairs(cvars) do
@@ -80,7 +79,7 @@ local cvars = {
                 SetCVar(cvar, value)
                 -- Print message if CVar have been changed
                 C_Timer.After(1, function()
-                    print("|cffff9f7fSetCVar|r", cvar, "|cffff9f7f==>|r", value)
+                    print("|cff00ff00SetCVar|r", cvar, "|cff00ff00=|r", value)
                 end)
             end
         end
