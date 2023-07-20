@@ -39,7 +39,7 @@ current settings:
     shadowRT                    = "0",
     shadowMode                  = "0",
     physicsLevel                = "0",
-    renderscale                 = "0.99",
+    renderscale                 = "1",
     farclip                     = "1",
     horizonStart                = "1",
     ResampleSharpness           = "-1",
