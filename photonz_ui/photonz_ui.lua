@@ -5,9 +5,9 @@ cvarlist: https://wowpedia.fandom.com/wiki/Console_variables
 
 read individual cvar: /dump scriptErrors
 
-set individual cvar: /console scriptErrors 1
+set individual cvar: /run SetCVar("scriptErrors", 1)
 
-reset individual cvar: /console cvar_default scriptErrors
+set individual cvar to default: /run SetCVar("scriptErrors", GetCVarDefault("scriptErrors"))
 
 reset all cvars to default: /console cvar_default
 ----------------------------------------------------------------------]]
