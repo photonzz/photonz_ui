@@ -72,7 +72,7 @@ local cvars = {
     ffxGlow             = "0", 
     ffxDeath             = "0", 
     ffxNether             = "0", 
-    maxFPS              = "300",
+    maxFPS              = "999",
     violenceLevel         = "0", 
     }
     
