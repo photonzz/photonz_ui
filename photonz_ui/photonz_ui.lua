@@ -1,5 +1,15 @@
 --[[--------------------------------------------------------------------
 photonz_ui
+
+cvarlist: https://wowpedia.fandom.com/wiki/Console_variables
+
+read individual cvar: /dump scriptErrors
+
+set individual cvar: /console scriptErrors 1
+
+reset individual cvar: /console cvar_default scriptErrors
+
+reset all cvars to default: /console cvar_default
 ----------------------------------------------------------------------]]
 
 local cvars = {
