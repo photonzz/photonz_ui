@@ -86,11 +86,26 @@ local cvars = {
         print("photonz_ui loaded")
 
         -- change nameplates to 1,2,3 in arena
-        local U=UnitIsUnit hooksecurefunc("CompactUnitFrame_UpdateName",
-        function(F)if IsActiveBattlefieldArena()and F.unit:find("nameplate")then
-             for i=1,5 do if U(F.unit,"arena"..i)
-                then F.name:SetText(i)F.name:SetTextColor(255,0,0,1)
-                    break end end end end)
+       local U = UnitIsUnit
+
+        -- This function is called every time the nameplate of a unit is updated
+        hooksecurefunc("CompactUnitFrame_UpdateName", function(F)
+        -- Only do this for arena nameplates
+            if IsActiveBattlefieldArena() and F.unit:find("nameplate") then
+        -- Loop through each arena number (1-5) and check if this nameplate belongs to that arena
+                for i=1,5 do 
+                    if U(F.unit, "arena"..i) then
+                -- Convert the arena number to a corresponding letter (a=1, b=2, c=3, etc.)
+                        local letter = string.char(string.byte("a") + i - 1)
+                        -- Set the nameplate text to the letter and make it red
+                        F.name:SetText(letter)
+                        F.name:SetTextColor(255,0,0,1)
+                -- Exit the loop because we've found the correct arena
+                break 
+            end 
+        end 
+    end 
+end)
         print("arena 123 script loaded")
 
         for cvar, value in pairs(cvars) do
