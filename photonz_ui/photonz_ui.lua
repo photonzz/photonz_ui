@@ -89,7 +89,7 @@ local cvars = {
         local U=UnitIsUnit hooksecurefunc("CompactUnitFrame_UpdateName",
         function(F)if IsActiveBattlefieldArena()and F.unit:find("nameplate")then
              for i=1,5 do if U(F.unit,"arena"..i)
-                then F.name:SetText(i)F.name:SetTextColor(255,0,0)
+                then F.name:SetText(i)F.name:SetTextColor(255,0,0,1)
                     break end end end end)
         print("arena 123 script loaded")
 
