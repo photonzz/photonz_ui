@@ -110,26 +110,37 @@ hooksecurefunc("CompactUnitFrame_UpdateName", function(F)
             F.name:SetTextColor(0,255,0,1)
         elseif U(F.unit, "party2") then
             F.name:SetText("down")
-            F.name:SetTextColor(0,0,255,1)
+            F.name:SetTextColor(0,255,0,1)
         elseif U(F.unit, "party3") then
             F.name:SetText("swup")
-            F.name:SetTextColor(255,255,0,1)
+            F.name:SetTextColor(0,255,0,1)
         elseif U(F.unit, "party4") then
             F.name:SetText("swdown")
-            F.name:SetTextColor(128,0,128,1)
+            F.name:SetTextColor(0,255,0,1)
         end
     end
 end)
         print("arena 123 script loaded")
 
-        for cvar, value in pairs(cvars) do
-            local current = tostring(GetCVar(cvar))
-            if current ~= value then            
-                SetCVar(cvar, value)
-                -- Print message if CVar have been changed
-                C_Timer.After(1, function()
-                    print("|cff00ff00SetCVar|r", cvar, "|cff00ff00=|r", value)
-                end)
+-- Define a table of cvars to be changed and their desired values
+local cvars = {
+    ["nameplateShowAll"] = "1" -- In this example, we want to change the "nameplateShowAll" cvar to "1"
+}
+
+-- Loop through the cvars table using the pairs() function
+    for cvar, value in pairs(cvars) do
+    -- Convert the current value of the cvar to a string using tostring()
+        local current = tostring(GetCVar(cvar))
+    -- Check if the current value is different from the desired value
+        if current ~= value then 
+        -- If the values are different, set the cvar to the desired value using SetCVar()
+            SetCVar(cvar, value)
+        -- Print a message to the chat frame indicating that the cvar has been changed
+            C_Timer.After(1, function()
+            print("|cff00ff00SetCVar|r", cvar, "|cff00ff00=|r", value)
+        end)
+    end
+end
             end
         end
     end)
