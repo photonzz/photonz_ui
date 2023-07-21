@@ -84,7 +84,15 @@ local cvars = {
 
         C_NamePlate.SetNamePlateFriendlySize(60, 30) -- Set friendly nameplate size
         print("photonz_ui loaded")
-    
+
+        -- change nameplates to 1,2,3 in arena
+        local U=UnitIsUnit hooksecurefunc("CompactUnitFrame_UpdateName",
+        function(F)if IsActiveBattlefieldArena()and F.unit:find("nameplate")then
+             for i=1,5 do if U(F.unit,"arena"..i)
+                then F.name:SetText(i)F.name:SetTextColor(255,0,0)
+                    break end end end end)
+        print("arena 123 script loaded")
+
         for cvar, value in pairs(cvars) do
             local current = tostring(GetCVar(cvar))
             if current ~= value then            
