@@ -86,25 +86,39 @@ local cvars = {
         print("photonz_ui loaded")
 
         -- change nameplates to 1,2,3 in arena
-       local U = UnitIsUnit
+        local U = UnitIsUnit
 
-        -- This function is called every time the nameplate of a unit is updated
-        hooksecurefunc("CompactUnitFrame_UpdateName", function(F)
-        -- Only do this for arena nameplates
-            if IsActiveBattlefieldArena() and F.unit:find("nameplate") then
-        -- Loop through each arena number (1-5) and check if this nameplate belongs to that arena
-                for i=1,5 do 
-                    if U(F.unit, "arena"..i) then
-                -- Convert the arena number to a corresponding letter (a=1, b=2, c=3, etc.)
-                        local letter = string.char(string.byte("a") + i - 1)
-                        -- Set the nameplate text to the letter and make it red
-                        F.name:SetText(letter)
-                        F.name:SetTextColor(255,0,0,1)
-                -- Exit the loop because we've found the correct arena
+hooksecurefunc("CompactUnitFrame_UpdateName", function(F)
+    -- Check if this unit is an arena or a party member
+    if IsActiveBattlefieldArena() and F.unit:find("nameplate") then
+        -- Arena nameplate
+        for i=1,5 do 
+            if U(F.unit, "arena"..i) then
+                local letter = string.char(string.byte("a") + i - 1)
+                F.name:SetText(letter)
+                F.name:SetTextColor(255,0,0,1)
                 break 
             end 
         end 
-    end 
+    elseif not IsActiveBattlefieldArena() and F.unit:find("nameplate") then
+        -- Party member nameplate
+        if U(F.unit, "player") then
+            -- This is the player's own nameplate, so don't change anything
+            return
+        elseif U(F.unit, "party1") then
+            F.name:SetText("up")
+            F.name:SetTextColor(0,255,0,1)
+        elseif U(F.unit, "party2") then
+            F.name:SetText("down")
+            F.name:SetTextColor(0,0,255,1)
+        elseif U(F.unit, "party3") then
+            F.name:SetText("swup")
+            F.name:SetTextColor(255,255,0,1)
+        elseif U(F.unit, "party4") then
+            F.name:SetText("swdown")
+            F.name:SetTextColor(128,0,128,1)
+        end
+    end
 end)
         print("arena 123 script loaded")
 
