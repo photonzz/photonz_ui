@@ -78,14 +78,13 @@ local cvars = {
     violenceLevel         = "0", 
     }
     
-    local f = CreateFrame("Frame")
-    f:RegisterEvent("PLAYER_LOGIN")
-    f:SetScript("OnEvent", function()
+local f = CreateFrame("Frame")
+f:RegisterEvent("PLAYER_LOGIN")
+f:SetScript("OnEvent", function()
+    C_NamePlate.SetNamePlateFriendlySize(60, 30) -- Set friendly nameplate size
+    print("photonz_ui loaded")
 
-        C_NamePlate.SetNamePlateFriendlySize(60, 30) -- Set friendly nameplate size
-        print("photonz_ui loaded")
-
-        -- change nameplates to 1,2,3 in arena
+    -- Change nameplates to 1, 2, 3 in arena
     -- Set a local variable `U` for the `UnitIsUnit()` function
     local U = UnitIsUnit
 
@@ -98,34 +97,33 @@ local cvars = {
                 if U(F.unit, "arena" .. i) then
                     -- If this is the correct arena, set the nameplate text to the arena number and make it red
                     F.name:SetText(i)
-                    F.name:SetTextColor(255, 0, 0, 1)
+                    F.name:SetTextColor(1, 0, 0, 1)
                     -- Exit the loop because we've found the correct arena
                     break 
                 end 
             end 
         end 
-    end)        
-        print("arena 123 script loaded")
-
--- Define a table of cvars to be changed and their desired values
-local cvars = {
-    ["nameplateShowAll"] = "1" -- In this example, we want to change the "nameplateShowAll" cvar to "1"
-}
-
--- Loop through the cvars table using the pairs() function
-    for cvar, value in pairs(cvars) do
-    -- Convert the current value of the cvar to a string using tostring()
-        local current = tostring(GetCVar(cvar))
-    -- Check if the current value is different from the desired value
-        if current ~= value then 
-        -- If the values are different, set the cvar to the desired value using SetCVar()
-            SetCVar(cvar, value)
-        -- Print a message to the chat frame indicating that the cvar has been changed
-            C_Timer.After(1, function()
-            print("|cff00ff00SetCVar|r", cvar, "|cff00ff00=|r", value)
-        end)
-    end
-end
-            end
-        end
     end)
+
+    print("arena 123 script loaded")
+
+    -- Define a table of cvars to be changed and their desired values
+    local cvars = {
+        ["nameplateShowAll"] = "1" -- In this example, we want to change the "nameplateShowAll" cvar to "1"
+    }
+
+    -- Loop through the cvars table using the pairs() function
+    for cvar, value in pairs(cvars) do
+        -- Convert the current value of the cvar to a string using tostring()
+        local current = tostring(GetCVar(cvar))
+        -- Check if the current value is different from the desired value
+        if current ~= value then 
+            -- If the values are different, set the cvar to the desired value using SetCVar()
+            SetCVar(cvar, value)
+            -- Print a message to the chat frame indicating that the cvar has been changed
+            C_Timer.After(1, function()
+                print("|cff00ff00SetCVar|r", cvar, "|cff00ff00=|r", value)
+            end)
+        end
+    end
+end)
