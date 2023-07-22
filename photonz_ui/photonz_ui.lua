@@ -107,11 +107,6 @@ f:SetScript("OnEvent", function()
 
     print("arena 123 script loaded")
 
-    -- Define a table of cvars to be changed and their desired values
-    local cvars = {
-        ["nameplateShowAll"] = "1" -- In this example, we want to change the "nameplateShowAll" cvar to "1"
-    }
-
     -- Loop through the cvars table using the pairs() function
     for cvar, value in pairs(cvars) do
         -- Convert the current value of the cvar to a string using tostring()
